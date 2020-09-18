@@ -1,12 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import * as content from './content.json';
+import {questions} from "./content.js"
+import {Question} from "./stories/Question.js"
 
 function App() {
+  let currentQuestion = questions[0];
   return (
     <div className="App">
-      {content}
+      <Question title={currentQuestion.title} type={currentQuestion.type} choices={currentQuestion.choices} correctCaption={currentQuestion.correctCaption} incorrectCaption={currentQuestion.incorrectCaption}></Question>
     </div>
   );
 }
