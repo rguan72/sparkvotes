@@ -1,25 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Button from "@material-ui/core/Button"
 import './button.css';
 
 /**
  * Primary UI component for user interaction
  */
-export const Button = ({ primary, backgroundColor, size, label, ...props }) => {
+export const Submit = ({ continues, primary, backgroundColor, size, ...props }) => {
   const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
   return (
-    <button
-      type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-      style={backgroundColor && { backgroundColor }}
-      {...props}
+    <Button
     >
-      {label}
-    </button>
+      {continues ? "Submit" : "Continue"}
+    </Button>
   );
 };
 
-Button.propTypes = {
+Submit.propTypes = {
+  /**
+   * Has the user already submitted an answer, making the button show continue?
+   */
+  continues: PropTypes.bool,
   /**
    * Is this the principal call to action on the page?
    */
@@ -33,16 +34,12 @@ Button.propTypes = {
    */
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   /**
-   * Button contents
-   */
-  label: PropTypes.string.isRequired,
-  /**
    * Optional click handler
    */
   onClick: PropTypes.func,
 };
 
-Button.defaultProps = {
+Submit.defaultProps = {
   backgroundColor: null,
   primary: false,
   size: 'medium',

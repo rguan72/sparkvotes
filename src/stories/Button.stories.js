@@ -1,16 +1,16 @@
 import React from 'react';
 
-import { Button } from './Button';
+import { Submit } from './Button';
 
 export default {
-  title: 'Example/Button',
-  component: Button,
+  title: 'Example/Submit',
+  component: Submit,
   argTypes: {
     backgroundColor: { control: 'color' },
   },
 };
 
-const Template = (args) => <Button {...args} />;
+const Template = (args) => <Submit {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
