@@ -10,7 +10,7 @@ export const Submit = ({ continues, ...props }) => {
   return (
     <Button
     >
-      {continues ? "Submit" : "Continue"}
+      {continues ? "Continue" : "Submit"}
     </Button>
   );
 };
