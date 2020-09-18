@@ -6,8 +6,7 @@ import './button.css';
 /**
  * Primary UI component for user interaction
  */
-export const Submit = ({ continues, primary, backgroundColor, size, ...props }) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+export const Submit = ({ continues, ...props }) => {
   return (
     <Button
     >
@@ -22,26 +21,12 @@ Submit.propTypes = {
    */
   continues: PropTypes.bool,
   /**
-   * Is this the principal call to action on the page?
-   */
-  primary: PropTypes.bool,
-  /**
-   * What background color to use
-   */
-  backgroundColor: PropTypes.string,
-  /**
-   * How large should the button be?
-   */
-  size: PropTypes.oneOf(['small', 'medium', 'large']),
-  /**
    * Optional click handler
    */
   onClick: PropTypes.func,
 };
 
 Submit.defaultProps = {
-  backgroundColor: null,
-  primary: false,
-  size: 'medium',
+  continues: false,
   onClick: undefined,
 };

@@ -7,7 +7,7 @@ import Box from "@material-ui/core/Box"
 /**
  * Primary UI component for user interaction
  */
-export const Choice = ({ label, selected }) => {
+export const Choice = ({ label, select }) => {
     return (
       <Box display="flex" justifyContent="center" alignItems="center">
         <Card
