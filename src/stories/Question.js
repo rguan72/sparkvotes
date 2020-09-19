@@ -15,7 +15,7 @@ export const Question = ({ title, type, choices, correct, correctCaption, incorr
     const [select, setSelect] = useState(choices.map(() => false))
     const [continues, setContinues] = useState(false)
     const [isCorrect, setIsCorrect] = useState(false)
-    let choiceList = choices.map((choice, idx) => <Choice label={choice} key={idx} selected={select[idx]} onClick={() => {
+    let choiceList = choices.map((choice, idx) => <Choice label={choice} key={idx} index={idx} selected={select[idx]} onClick={() => {
         const newSelect = select.map(() => false);
         newSelect[idx] = true;
         setSelect(newSelect);
@@ -27,7 +27,7 @@ export const Question = ({ title, type, choices, correct, correctCaption, incorr
             <Box> <Submit continues={continues} onClick={() => {setContinues(true); setIsCorrect(getTrue(select) === correct) }} /></Box>
             {continues  && 
                 <Box>
-                    {isCorrect}
+                    {isCorrect ? correctCaption : incorrectCaption}
                 </Box>
             }
         </Box>
