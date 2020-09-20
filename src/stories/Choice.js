@@ -7,7 +7,7 @@ import Box from "@material-ui/core/Box"
 /**
  * Primary UI component for user interaction
  */
-export const Choice = ({ label, index, select }) => {
+export const Choice = ({ label, index, select, onClick}) => {
     return (
       <Box display="flex" justifyContent="center" alignItems="center">
         <Card
@@ -15,8 +15,9 @@ export const Choice = ({ label, index, select }) => {
             padding: "10vw",
             fontSize: 20,
             boxShadow: "#ADD8E6",
-            backgroundColor: select[index] ? "#ADD8E6" : "#D3D3D3",
+            backgroundColor: select ? "#ADD8E6" : "#D3D3D3",
           }}
+          onClick={onClick}
         >
           {label}
         </Card>
@@ -25,7 +26,7 @@ export const Choice = ({ label, index, select }) => {
 };
 
 Choice.propTypes = {
-    selected: PropTypes.bool.isRequired,
+    select: PropTypes.bool.isRequired,
     /**
      * Button contents
      */

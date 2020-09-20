@@ -6,9 +6,10 @@ import './button.css';
 /**
  * Primary UI component for user interaction
  */
-export const Submit = ({ continues, ...props }) => {
+export const Submit = ({ continues, onClick}) => {
   return (
     <Button
+      onClick={onClick}
     >
       {continues ? "Continue" : "Submit"}
     </Button>
