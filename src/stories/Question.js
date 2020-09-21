@@ -34,6 +34,7 @@ export const Question = ({ title, type, choices, correct, correctCaption, incorr
         }
         setSelect(newSelect);
     }}/>)
+    const correctChoices = choices.filter((_, idx) => correct.includes(idx)).map(choice => choice)
     return (
         <Box>
             <Box> {title} </Box>
@@ -41,8 +42,11 @@ export const Question = ({ title, type, choices, correct, correctCaption, incorr
             <Box> <Submit disabled={type !== "SA" && JSON.stringify(select) === JSON.stringify(choices.map(() => false))} continues={continues} onClick={() => {if(continues) incrementQuestion(); setContinues(true); setIsCorrect(checkCorrect(select, correct))}} /></Box>
             {continues  && 
                 <Box>
-                    {isCorrect ? correctCaption : incorrectCaption}
+                    {isCorrect ? correctCaption :  incorrectCaption}
                 </Box>
+            }
+            {
+                continues && !isCorrect && <Box> The correct answer is {correctChoices}</Box>
             }
         </Box>
     );
