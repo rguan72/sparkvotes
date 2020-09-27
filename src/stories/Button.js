@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Button from "@material-ui/core/Button"
+import Box from "@material-ui/core/Box"
 import './button.css';
 
 /**
@@ -9,10 +10,14 @@ import './button.css';
 export const Submit = ({ continues, onClick, disabled}) => {
   return (
     <Button
+      variant={"contained"}
       onClick={onClick}
       disabled={disabled}
+      disableElevation
     >
-      {continues ? "Continue" : "Submit"}
+      <Box mx={"10vw"}>
+        {continues ? "Continue" : "Submit"}
+      </Box>
     </Button>
   );
 };

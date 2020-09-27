@@ -4,6 +4,24 @@ import {questions} from "./content.js"
 import {Question} from "./stories/Question.js"
 import { CelebrationPage } from "./stories/Celebration.js"
 import { LandingPage } from "./stories/LandingPage.js"
+import {withStyles} from "@material-ui/core/styles";
+import LinearProgress from "@material-ui/core/LinearProgress";
+import Box from "@material-ui/core/Box";
+
+const BorderLinearProgress = withStyles((theme) => ({
+  root: {
+    height: 10,
+    borderRadius: 5,
+  },
+  colorPrimary: {
+    backgroundColor:
+        theme.palette.grey[theme.palette.type === "light" ? 200 : 700],
+  },
+  bar: {
+    borderRadius: 5,
+    backgroundColor: "#1a90ff",
+  },
+}))(LinearProgress);
 
 function App() {
   const [questionIndex, setQuestionIndex] = useState(-1);
@@ -16,7 +34,12 @@ function App() {
   }
   else {
     return (
-        <Question incrementQuestion={() => (setQuestionIndex(questionIndex + 1))} title={currentQuestion.title} type={currentQuestion.type} correct={currentQuestion.correct} choices={currentQuestion.choices} correctCaption={currentQuestion.correctCaption} incorrectCaption={currentQuestion.incorrectCaption}></Question>
+        <Box>
+          <Box m={"2vw"}>
+            <BorderLinearProgress variant="determinate" value={questionIndex / questions.length * 100.0 } />
+          </Box>
+          <Question incrementQuestion={() => (setQuestionIndex(questionIndex + 1))} title={currentQuestion.title} type={currentQuestion.type} correct={currentQuestion.correct} choices={currentQuestion.choices} correctCaption={currentQuestion.correctCaption} incorrectCaption={currentQuestion.incorrectCaption}></Question>
+        </Box>
     );
   }
 }

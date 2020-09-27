@@ -7,15 +7,21 @@ import Box from "@material-ui/core/Box"
 /**
  * Primary UI component for user interaction
  */
-export const Choice = ({ label, index, select, onClick}) => {
+export const Choice = ({ style, label, index, select, onClick}) => {
     return (
-      <Box display="flex" justifyContent="center" alignItems="center">
+      <Box style={style} display="flex" justifyContent="center" alignItems="center">
         <Card
           style={{
-            padding: "10vw",
+            width: "40vw",
+            height: "20vh",
+            margin: "1vw",
+            padding: "1vw",
             fontSize: 20,
             boxShadow: "#ADD8E6",
             backgroundColor: select ? "#ADD8E6" : "#D3D3D3",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
           }}
           onClick={onClick}
         >
@@ -36,4 +42,8 @@ Choice.propTypes = {
      * Optional click handler
      */
     onClick: PropTypes.func,
+    /**
+     * Optional style object
+     */
+    style: PropTypes.object,
 };

@@ -14,7 +14,7 @@ const Template = (args) => <Choice {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-    selected: true,
+    select: false,
     label: 'Button',
 };
 
