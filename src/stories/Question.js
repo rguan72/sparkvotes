@@ -6,6 +6,7 @@ import dingSfx from "../sounds/correct.mp3"
 import boopSfx from "../sounds/incorrect.mp3"
 import { Submit } from "./Button"
 import { Choice } from "./Choice"
+import { Bar } from "./Bar"
 
 function checkCorrect(select, correct) {
     let correctSelect = [];
@@ -42,8 +43,6 @@ export const Question = ({ title, type, choices, correct, correctCaption, incorr
     }}/>)
 
     const onSubmit = () => {
-        playRight();
-        console.log("yo")
         if (continues) { incrementQuestion(); return;  };
         setContinues(true);
         const newIsCorrect = checkCorrect(select, correct);
@@ -60,16 +59,7 @@ export const Question = ({ title, type, choices, correct, correctCaption, incorr
             <Box display={"flex"} justifyContent={"center"}>
                 <Submit disabled={type !== "SA" && JSON.stringify(select) === JSON.stringify(choices.map(() => false))} continues={continues} onClick={onSubmit} />
             </Box>
-            <Box position={"absolute"} bottom={0} display={"flex"} alignItems={"center"} flexDirection={"column"}>
-                {continues  &&
-                <Box>
-                    {isCorrect ? correctCaption :  incorrectCaption}
-                </Box>
-                }
-                {
-                    continues && !isCorrect && <Box> The correct answer is {correctChoices}</Box>
-                }
-            </Box>
+            <Bar continues={continues} isCorrect={isCorrect} correctCaption={correctCaption} incorrectCaption={incorrectCaption} correctChoices={correctChoices}/>
         </Box>
     );
 }
