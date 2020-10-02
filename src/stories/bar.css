@@ -1,3 +1,5 @@
 .bar-box {
     background-color: aquamarine;
+    z-index: -10;
+    opacity: .5;
 }

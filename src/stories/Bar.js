@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Box from "@material-ui/core/Box";
+import Typography from "@material-ui/core/Typography";
+import { useSpring, animated } from "react-spring";
 import "./bar.css";
 
 /**
@@ -9,14 +11,20 @@ import "./bar.css";
 export const Bar = ({ continues, isCorrect, correctCaption, incorrectCaption, correctChoices }) => {
   return (
     <Box
+      mt={"3vh"}
       position="absolute"
       bottom={0}
-      height="10vh"
+      left={0}
+      width="100vw"
+      height="14vh"
       className="bar-box"
     >
-      {continues && <Box>{isCorrect ? correctCaption : incorrectCaption}</Box>}
+      {continues && <Box ml={"5vw"} mt={"1vh"}>{isCorrect ? correctCaption : ""}</Box>}
       {continues && !isCorrect && (
-        <Box> The correct answer is {correctChoices}</Box>
+        <Box ml={"5vw"}>
+          <Typography>Correct Answer:</Typography>
+          <Typography>{correctChoices}</Typography>
+        </Box>
       )}
     </Box>
   );
