@@ -9,13 +9,14 @@ import Box from "@material-ui/core/Box"
  */
 export const Choice = ({ style, label, index, select, onClick}) => {
     return (
-      <Box style={style} display="flex" justifyContent="center" alignItems="center">
+      <Box style={style} display="flex" justifyContent="space-between" alignItems="center">
         <Card
           style={{
             width: "40vw",
             height: "20vh",
-            margin: "1vw",
-            padding: "1vw",
+            marginRight: (index % 2 === 0) ? "1vw" : 0,
+            marginBottom: "vw",
+            padding: "2vw",
             fontSize: 20,
             boxShadow: "#ADD8E6",
             backgroundColor: select ? "#ADD8E6" : "#D3D3D3",

@@ -2399,6 +2399,46 @@
     prop-types "^15.6.1"
     react-lifecycles-compat "^3.0.4"
 
+"@react-hook/debounce@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@react-hook/debounce/-/debounce-3.0.0.tgz#9eea8b5d81d4cb67cd72dd8657b3ff724afc7cad"
+  integrity sha512-ir/kPrSfAzY12Gre0sOHkZ2rkEmM4fS5M5zFxCi4BnCeXh2nvx9Ujd+U4IGpKCuPA+EQD0pg1eK2NGLvfWejag==
+  dependencies:
+    "@react-hook/latest" "^1.0.2"
+
+"@react-hook/event@^1.2.1":
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/@react-hook/event/-/event-1.2.3.tgz#cfe86d5cf36f53e85b367ff619990d001b5c82ae"
+  integrity sha512-WMBwLnYY2rubLeecsi4skl1imfx0oiXTgazV/1ByPT6WkmLvxUao3hC+mxps5D/+JK4Fq3uG9OWU/dn5jMtXyg==
+  dependencies:
+    "@react-hook/passive-layout-effect" "^1.2.0"
+
+"@react-hook/latest@^1.0.2":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@react-hook/latest/-/latest-1.0.3.tgz#c2d1d0b0af8b69ec6e2b3a2412ba0768ac82db80"
+  integrity sha512-dy6duzl+JnAZcDbNTfmaP3xHiKtbXYOaz3G51MGVljh548Y8MWzTr+PHLOfvpypEVW9zwvl+VyKjbWKEVbV1Rg==
+
+"@react-hook/passive-layout-effect@^1.2.0":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@react-hook/passive-layout-effect/-/passive-layout-effect-1.2.1.tgz#c06dac2d011f36d61259aa1c6df4f0d5e28bc55e"
+  integrity sha512-IwEphTD75liO8g+6taS+4oqz+nnroocNfWVHWz7j+N+ZO2vYrc6PV1q7GQhuahL0IOR7JccFTsFKQ/mb6iZWAg==
+
+"@react-hook/throttle@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@react-hook/throttle/-/throttle-2.2.0.tgz#d0402714a06e1ba0bc1da1fdf5c3c5cd0e08d45a"
+  integrity sha512-LJ5eg+yMV8lXtqK3lR+OtOZ2WH/EfWvuiEEu0M3bhR7dZRfTyEJKxH1oK9uyBxiXPtWXiQggWbZirMCXam51tg==
+  dependencies:
+    "@react-hook/latest" "^1.0.2"
+
+"@react-hook/window-size@^3.0.7":
+  version "3.0.7"
+  resolved "https://registry.yarnpkg.com/@react-hook/window-size/-/window-size-3.0.7.tgz#00d176e7a8eb55814e161eae34aae20afbcbe35d"
+  integrity sha512-bK5ed/jN+cxy0s1jt2CelCnUt7jZRseUvPQ22ZJkUl/QDOsD+7CA/6wcqC3c0QweM/fPBRP6uI56TJ48SnlVww==
+  dependencies:
+    "@react-hook/debounce" "^3.0.0"
+    "@react-hook/event" "^1.2.1"
+    "@react-hook/throttle" "^2.2.0"
+
 "@sheerun/mutationobserver-shim@^0.3.2":
   version "0.3.3"
   resolved "https://registry.yarnpkg.com/@sheerun/mutationobserver-shim/-/mutationobserver-shim-0.3.3.tgz#5405ee8e444ed212db44e79351f0c70a582aae25"
@@ -6280,7 +6320,7 @@ data-urls@^1.0.0, data-urls@^1.1.0:
     whatwg-mimetype "^2.2.0"
     whatwg-url "^7.0.0"
 
-debug@2.6.9, debug@^2.2.0, debug@^2.3.3, debug@^2.6.0, debug@^2.6.9:
+debug@2.6.9, debug@^2.1.3, debug@^2.2.0, debug@^2.3.3, debug@^2.6.0, debug@^2.6.9:
   version "2.6.9"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.9.tgz#5d128515df134ff327e90a4c93f4e077a536341f"
   integrity sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==
@@ -9793,6 +9833,13 @@ jsonify@~0.0.0:
   resolved "https://registry.yarnpkg.com/jsonify/-/jsonify-0.0.0.tgz#2c74b6ee41d93ca51b7b5aaee8f503631d252a73"
   integrity sha1-LHS27kHZPKUbe1qu6PUDYx0lKnM=
 
+jsonp@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/jsonp/-/jsonp-0.2.1.tgz#a65b4fa0f10bda719a05441ea7b94c55f3e15bae"
+  integrity sha1-pltPoPEL2nGaBUQep7lMVfPhW64=
+  dependencies:
+    debug "^2.1.3"
+
 jsprim@^1.2.2:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/jsprim/-/jsprim-1.4.1.tgz#313e66bc1e5cc06e438bc1b7499c2e5c56acb6a2"
@@ -12503,6 +12550,13 @@ react-color@^2.17.0:
     reactcss "^1.2.0"
     tinycolor2 "^1.4.1"
 
+react-confetti@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/react-confetti/-/react-confetti-6.0.0.tgz#d1817dba4ad8d1a8742689db68d8b4bb145ea43e"
+  integrity sha512-gPuMIiJcpRFtyv3LvWKOvXxwbm1X9fyWT3wQsIMmmM7UhW3u84Te/xqfee4c0gicQXli8zCfIDkOlZyrHBk7pw==
+  dependencies:
+    tween-functions "^1.2.0"
+
 react-dev-utils@^10.0.0, react-dev-utils@^10.2.1:
   version "10.2.1"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-10.2.1.tgz#f6de325ae25fa4d546d09df4bb1befdc6dd19c19"
@@ -12726,6 +12780,14 @@ react-scripts@3.4.3:
     workbox-webpack-plugin "4.3.1"
   optionalDependencies:
     fsevents "2.1.2"
+
+react-share@^4.3.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/react-share/-/react-share-4.3.0.tgz#9455436a917c431ec96fbfb90359e595148a9e15"
+  integrity sha512-o22ySANU2l9Ih/ICyC+a6KoWxQ0dKNTIdfm3k3dCKj+16zfYgafHfiPqPYSkGJz1DeFcNJuU5FsgpWvqR1hdCA==
+  dependencies:
+    classnames "^2.2.5"
+    jsonp "^0.2.1"
 
 react-sizeme@^2.6.7:
   version "2.6.12"
@@ -14584,6 +14646,11 @@ tunnel-agent@^0.6.0:
   integrity sha1-J6XeoGs2sEoKmWZ3SykIaPD8QP0=
   dependencies:
     safe-buffer "^5.0.1"
+
+tween-functions@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/tween-functions/-/tween-functions-1.2.0.tgz#1ae3a50e7c60bb3def774eac707acbca73bbc3ff"
+  integrity sha1-GuOlDnxguz3vd06scHrLynO7w/8=
 
 tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   version "0.14.5"

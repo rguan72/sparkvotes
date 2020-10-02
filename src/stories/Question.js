@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import Box from "@material-ui/core/Box"
+import Typography from "@material-ui/core/Typography";
 import useSound from "use-sound"
 import dingSfx from "../sounds/wining-bell-game-show-sound.mp3"
 import boopSfx from "../sounds/losing-bell-game-show-sound.mp3"
@@ -51,13 +52,13 @@ export const Question = ({ title, type, choices, correct, correctCaption, incorr
 
     const correctChoices = choices.filter((_, idx) => correct.includes(idx)).map(choice => choice)
     return (
-        <Box>
-            <Box display={"flex"} justifyContent={"center"}> {title} </Box>
-            <Box display="flex" flexWrap="wrap" justifyContent={"center"}> {choiceList} </Box>
-            <Box display={"flex"} justifyContent={"center"} mt={"3vh"}>
+        <Box height={"88vh"} display={"flex"} flexDirection={"column"}>
+            <Box display={"flex"} justifyContent={"center"}> <Typography variant={"h5"}> {title} </Typography></Box>
+            <Box display="flex" flexWrap="wrap" justifyContent={"space-between"} flexGrow={1} alignItems="center" width={"100%"}> {choiceList} </Box>
+            <Box display={"flex"} justifyContent={"center"}>
                 <Submit disabled={type !== "SA" && JSON.stringify(select) === JSON.stringify(choices.map(() => false))} continues={continues} onClick={onSubmit} />
             </Box>
-            <Box display={"flex"} alignItems={"center"} flexDirection={"column"}>
+            <Box position={"absolute"} bottom={0} display={"flex"} alignItems={"center"} flexDirection={"column"}>
                 {continues  &&
                 <Box>
                     {isCorrect ? correctCaption :  incorrectCaption}

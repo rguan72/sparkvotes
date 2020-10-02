@@ -15,7 +15,7 @@ export const Submit = ({ continues, onClick, disabled}) => {
       disabled={disabled}
       disableElevation
     >
-      <Box mx={"10vw"}>
+      <Box mx={"15vw"}>
         {continues ? "Continue" : "Submit"}
       </Box>
     </Button>

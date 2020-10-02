@@ -10,8 +10,8 @@ import Box from "@material-ui/core/Box";
 
 const BorderLinearProgress = withStyles((theme) => ({
   root: {
-    height: 10,
-    borderRadius: 5,
+    height: 30,
+    borderRadius: 20,
   },
   colorPrimary: {
     backgroundColor:
@@ -35,10 +35,12 @@ function App() {
   else {
     return (
         <Box>
-          <Box m={"2vw"}>
+          <Box mt={"3vh"} px={"5vw"}>
             <BorderLinearProgress variant="determinate" value={questionIndex / questions.length * 100.0 } />
           </Box>
-          <Question incrementQuestion={() => (setQuestionIndex(questionIndex + 1))} title={currentQuestion.title} type={currentQuestion.type} correct={currentQuestion.correct} choices={currentQuestion.choices} correctCaption={currentQuestion.correctCaption} incorrectCaption={currentQuestion.incorrectCaption}></Question>
+          <Box mt={"3vh"} px={"5vw"}>
+            <Question incrementQuestion={() => (setQuestionIndex(questionIndex + 1))} title={currentQuestion.title} type={currentQuestion.type} correct={currentQuestion.correct} choices={currentQuestion.choices} correctCaption={currentQuestion.correctCaption} incorrectCaption={currentQuestion.incorrectCaption}></Question>
+          </Box>
         </Box>
     );
   }
