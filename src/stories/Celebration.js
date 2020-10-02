@@ -4,7 +4,7 @@ import Typography from "@material-ui/core/Typography";
 import Confetti from "react-confetti";
 import { useWindowSize } from "@react-hook/window-size";
 import useSound from "use-sound"
-import yaySfx from "../sounds/wining-bell-game-show-sound.mp3"
+import yaySfx from "../sounds/correct.mp3"
 
 export const CelebrationPage = () => {
     const [width, height] = useWindowSize()

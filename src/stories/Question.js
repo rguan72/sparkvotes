@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react"
 import Box from "@material-ui/core/Box"
 import Typography from "@material-ui/core/Typography";
 import useSound from "use-sound"
-import dingSfx from "../sounds/wining-bell-game-show-sound.mp3"
-import boopSfx from "../sounds/losing-bell-game-show-sound.mp3"
+import dingSfx from "../sounds/correct.mp3"
+import boopSfx from "../sounds/incorrect.mp3"
 import { Submit } from "./Button"
 import { Choice } from "./Choice"
 
@@ -42,6 +42,8 @@ export const Question = ({ title, type, choices, correct, correctCaption, incorr
     }}/>)
 
     const onSubmit = () => {
+        playRight();
+        console.log("yo")
         if (continues) { incrementQuestion(); return;  };
         setContinues(true);
         const newIsCorrect = checkCorrect(select, correct);
