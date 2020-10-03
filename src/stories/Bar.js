@@ -9,14 +9,16 @@ import "./bar.css";
  * Primary UI component for user interaction
  */
 export const Bar = ({ continues, isCorrect, correctCaption, incorrectCaption, correctChoices }) => {
+  const height = useSpring({ height: "14vh", from: { height: "0vh"}})
+  const AnimatedBox = animated(Box)
   return (
-    <Box
+    <AnimatedBox
       mt={"3vh"}
       position="absolute"
       bottom={0}
       left={0}
       width="100vw"
-      height="14vh"
+      height={height.height}
       className="bar-box"
     >
       {continues && <Box ml={"5vw"} mt={"1vh"}>{isCorrect ? correctCaption : ""}</Box>}
@@ -26,7 +28,7 @@ export const Bar = ({ continues, isCorrect, correctCaption, incorrectCaption, co
           <Typography>{correctChoices}</Typography>
         </Box>
       )}
-    </Box>
+    </AnimatedBox>
   );
 };
 

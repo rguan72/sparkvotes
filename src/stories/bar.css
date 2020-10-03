@@ -2,4 +2,10 @@
     background-color: aquamarine;
     z-index: -10;
     opacity: .5;
+    margin-top: 3vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 14vh;
 }
