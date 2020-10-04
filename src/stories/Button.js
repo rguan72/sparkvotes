@@ -13,7 +13,6 @@ export const Submit = ({ continues, onClick, disabled}) => {
       variant={"contained"}
       onClick={onClick}
       disabled={disabled}
-      disableElevation
       style={{ zIndex: 3}}
     >
       <Box mx={"15vw"}>

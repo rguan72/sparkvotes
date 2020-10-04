@@ -12,7 +12,7 @@ export const LandingPage = ({ next }) => {
                 <Typography align={"center"} variant={"h4"}> Learn to vote in Michigan!  </Typography>
             </Box>
             <Box mx={"5vw"} mt={"17vh"} display={"flex"} justifyContent={"center"}>
-                <Button variant={"contained"} disableElevation onClick={next}> <Box mx={"3vw"}> Take the Quiz </Box> </Button>
+                <Button variant={"contained"} onClick={next}> <Box mx={"3vw"}> Take the Quiz </Box> </Button>
             </Box>
         </Box>
     );

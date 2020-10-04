@@ -40,7 +40,7 @@ export const Bar = ({ continues, isCorrect, correctCaption, incorrectCaption, co
         bottom: 0,
         left: 0,
         width: "100vw",
-        height: "14vh",
+        height: "20vh",
       }}
     >
       {continues && (
@@ -50,8 +50,8 @@ export const Bar = ({ continues, isCorrect, correctCaption, incorrectCaption, co
       )}
       {continues && !isCorrect && (
         <Box ml={"5vw"}>
-          <Typography variant="h6" style={{ color: "white" }}>Correct Answer:</Typography>
-          <Typography variant="h7">{correctChoicesMapped}</Typography>
+          <Typography variant="h4" style={{ color: "white" }}>Correct Answer:</Typography>
+          <Typography variant="h5">{correctChoicesMapped}</Typography>
         </Box>
       )}
     </AnimatedBox>
