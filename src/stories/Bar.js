@@ -34,7 +34,8 @@ export const Bar = ({ continues, isCorrect, correctCaption, incorrectCaption, co
         height={height}
         duration={ 500 }
         style={{
-          backgroundColor: isCorrect ? "#d4e6ae" : "#cf6428",
+          backgroundColor: isCorrect ? "#d4e6ae" : "#DBA9C7",
+          opacity: .75,
           flexShrink: 0,
           zIndex: 2, 
           position: "absolute",
