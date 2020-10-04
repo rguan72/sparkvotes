@@ -14,6 +14,7 @@ export const Submit = ({ continues, onClick, disabled}) => {
       onClick={onClick}
       disabled={disabled}
       disableElevation
+      style={{ zIndex: 3}}
     >
       <Box mx={"15vw"}>
         {continues ? "Continue" : "Submit"}

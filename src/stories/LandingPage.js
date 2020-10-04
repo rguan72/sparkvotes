@@ -7,7 +7,7 @@ import AppBar from "@material-ui/core/AppBar";
 export const LandingPage = ({ next }) => {
     return (
         <Box>
-            <AppBar position={"static"}> <Box my={"3vh"}><Typography align={"center"} variant={"h5"}> Creative Campus Voting Project </Typography></Box> </AppBar>
+            <AppBar style={{ backgroundColor: "#612d7a" }} position={"static"}> <Box my={"3vh"}><Typography align={"center"} variant={"h5"}> Creative Campus Voting Project </Typography></Box> </AppBar>
             <Box mx={"5vw"} mt={"17vh"} display={"flex"} justifyContent={"center"} alignItems={"center"}>
                 <Typography align={"center"} variant={"h4"}> Learn to vote in Michigan!  </Typography>
             </Box>

@@ -4,7 +4,7 @@ const questions = [
         type: "TF",
         choices: ["True", "False"], 
         correct: [1],
-        correctCaption: "Nice bro!!!!",
+        correctCaption: "Nice!",
         incorrectCaption: "Ur a bum"
     },
     {
@@ -12,15 +12,15 @@ const questions = [
         type: "TF",
         choices: ["True", "False"], 
         correct: [0],
-        correctCaption: "Nice bro!!!!",
+        correctCaption: "Awesome!",
         incorrectCaption: "Ur a bum"
     },
     {
         title: "Absentee Voting is another name for (check all that apply)",
         type: "SA",
-        choices: ["voting by mail", "voting early", "voting at home"], 
+        choices: ["Voting by mail", "Voting early", "Voting at home"], 
         correct: [0, 1, 2],
-        correctCaption: "Nice bro!!!!",
+        correctCaption: "Amazing!",
         incorrectCaption: "Ur a bum"
     },
     {
@@ -28,15 +28,15 @@ const questions = [
         type: "TF",
         choices: ["True", "False"], 
         correct: [0],
-        correctCaption: "Nice bro!!!!",
+        correctCaption: "Nice job!",
         incorrectCaption: "Ur a bum"
     },
     {
         title: "Where do you sign your absentee ballot?",
         type: "MC",
-        choices: ["At the bottom of your ballot", "Across the top of your ballot", "The back of the envelope."], 
+        choices: ["Bottom of ballot", "Top of ballot", "Back of envelope"], 
         correct: [2],
-        correctCaption: "Nice bro!!!!",
+        correctCaption: "Nice!",
         incorrectCaption: "Ur a bum"
     },
     {
@@ -44,7 +44,7 @@ const questions = [
         type: "TF",
         choices: ["True", "False"], 
         correct: [1],
-        correctCaption: "Nice bro!!!!",
+        correctCaption: "Perfect!",
         incorrectCaption: "Ur a bum"
     }
 ];

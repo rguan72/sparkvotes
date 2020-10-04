@@ -1,7 +1,6 @@
 .bar-box {
     background-color: aquamarine;
-    z-index: -10;
-    opacity: .5;
+    z-index: 2;
     margin-top: 3vh;
     position: absolute;
     bottom: 0;

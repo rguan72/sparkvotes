@@ -9,7 +9,7 @@ import Box from "@material-ui/core/Box"
  */
 export const Choice = ({ style, label, index, select, onClick}) => {
     return (
-      <Box style={style} display="flex" justifyContent="space-between" alignItems="center">
+      // <Box style={style} display="flex" justifyContent="space-between" alignItems="center">
         <Card
           style={{
             width: "40vw",
@@ -23,12 +23,13 @@ export const Choice = ({ style, label, index, select, onClick}) => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+            textAlign: "center",
           }}
           onClick={onClick}
         >
           {label}
         </Card>
-      </Box>
+      // </Box>
     );
 };
 
