@@ -4,7 +4,7 @@ import {questions} from "./content.js"
 import {Question} from "./stories/Question.js"
 import { CelebrationPage } from "./stories/Celebration.js"
 import { LandingPage } from "./stories/LandingPage.js"
-import {useTheme, withStyles} from "@material-ui/core/styles";
+import {withStyles} from "@material-ui/core/styles";
 import LinearProgress from "@material-ui/core/LinearProgress";
 import Box from "@material-ui/core/Box";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";

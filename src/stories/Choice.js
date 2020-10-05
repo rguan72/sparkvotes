@@ -1,15 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Card from "@material-ui/core/Card"
-import Box from "@material-ui/core/Box"
-// import './button.css';
 
 /**
  * Primary UI component for user interaction
  */
 export const Choice = ({ style, label, index, select, onClick}) => {
     return (
-      // <Box style={style} display="flex" justifyContent="space-between" alignItems="center">
         <Card
           style={{
             width: "40vw",
@@ -29,7 +26,6 @@ export const Choice = ({ style, label, index, select, onClick}) => {
         >
           {label}
         </Card>
-      // </Box>
     );
 };
 
