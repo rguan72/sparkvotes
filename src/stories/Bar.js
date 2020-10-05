@@ -23,7 +23,7 @@ export const Bar = ({ continues, isCorrect, correctCaption, incorrectCaption, co
     <animated.div
       style={{
         backgroundColor: isCorrect ? "#d4e6ae" : "#DBA9C7",
-        opacity: 0.75, // hide when not continues
+        opacity: .9,
         flexShrink: 0,
         zIndex: 2,
         position: "absolute",

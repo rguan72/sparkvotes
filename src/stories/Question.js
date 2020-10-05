@@ -54,11 +54,11 @@ export const Question = ({ title, type, choices, correct, correctCaption, incorr
     const correctChoices = choices.filter((_, idx) => correct.includes(idx)).map(choice => choice)
     return (
         <Box height={"80vh"} display={"flex"} flexDirection={"column"}>
-            <Box display={"flex"} justifyContent={"center"}> <Typography variant={"h5"}> {title} </Typography></Box>
+            <Box display={"flex"} justifyContent={"center"} mt={"1vh"}> <Typography variant={"h5"}> {title} </Typography></Box>
             <Box display="flex" flexWrap="wrap" mt={"-5vh"} justifyContent={"space-between"} flexGrow={1} alignItems="center" alignContent="space-evenly" width={"100%"}> 
                 {choiceList}
             </Box>
-            <Box display={"flex"} justifyContent={"center"}>
+            <Box display={"flex"} justifyContent={"center"} mb="1vh">
                 <Submit disabled={type !== "SA" && JSON.stringify(select) === JSON.stringify(choices.map(() => false))} continues={continues} onClick={onSubmit} />
             </Box>
             <Bar continues={continues} isCorrect={isCorrect} correctCaption={correctCaption} incorrectCaption={incorrectCaption} correctChoices={correctChoices}/>
