@@ -10,10 +10,10 @@ const trans = (y) => `translate(0vh, ${y})`;
  * Primary UI component for user interaction
  */
 export const Bar = ({ continues, isCorrect, correctCaption, incorrectCaption, correctChoices }) => {
-  const [props, set] = useSpring(() => ({ y: "20vh"}))
+  const [props, set] = useSpring(() => ({ y: "32vh"}))
   useEffect(() => {
     if (continues) set({ y: "0vh" })
-    else set({ y: "20vh" })
+    else set({ y: "32vh" })
   }, [continues, set])
   let correctChoicesMapped = correctChoices;
   if (correctChoices.length > 1) {
@@ -27,7 +27,7 @@ export const Bar = ({ continues, isCorrect, correctCaption, incorrectCaption, co
         flexShrink: 0,
         zIndex: 2,
         position: "absolute",
-        height: "20vh",
+        height: "32vh",
         bottom: 0,
         left: 0,
         marginTop: "3vh",
@@ -47,7 +47,7 @@ export const Bar = ({ continues, isCorrect, correctCaption, incorrectCaption, co
       )}
       {continues && !isCorrect && (
         <Box ml={"5vw"}>
-          <Typography variant="h4">Correct Answer:</Typography>
+          <Typography variant="h5">Correct Answer:</Typography>
           <Typography variant="h5" style={{ fontWeight: "bold" }}>
             {correctChoicesMapped}
           </Typography>

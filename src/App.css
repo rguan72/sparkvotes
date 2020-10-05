@@ -3,9 +3,11 @@
   font-family: 'Raleway, Arial';
 }
 
-html, body {
-  height: 100%;
-  overflow: hidden;
+@media only screen and (min-width: 768px) {
+  html, body {
+    height: 100%;
+    overflow: hidden;
+  }
 }
 
 .App-logo {
