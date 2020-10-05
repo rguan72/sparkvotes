@@ -3,6 +3,11 @@
   font-family: 'Raleway, Arial';
 }
 
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
