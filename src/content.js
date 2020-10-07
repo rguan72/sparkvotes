@@ -46,14 +46,6 @@ const questions = [
         correct: [2],
         correctCaption: "Nice!",
         incorrectCaption: ""
-    },
-    {
-        title: "You have to vote on everything on the ballot in order for your vote to count",
-        type: "TF",
-        choices: ["True", "False"], 
-        correct: [1],
-        correctCaption: "Perfect!",
-        incorrectCaption: ""
     }
 ];
 

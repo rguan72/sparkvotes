@@ -52,7 +52,7 @@ export const Bar = ({ continues, isCorrect, correctCaption, incorrectCaption, co
           <Typography variant="h5" style={{ fontWeight: "bold" }}>
             {correctChoicesMapped}
           </Typography>
-          <Typography variant="subtitle">
+          <Typography variant="body1">
             {incorrectCaption}
           </Typography>
         </Box>
