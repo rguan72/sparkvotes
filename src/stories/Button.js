@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Button from "@material-ui/core/Button"
 import Box from "@material-ui/core/Box"
+import Typography from "@material-ui/core/Typography"
 import './button.css';
 
 /**
@@ -15,8 +16,8 @@ export const Submit = ({ continues, onClick, disabled}) => {
       disabled={disabled}
       style={{ zIndex: 3}}
     >
-      <Box mx={"30vw"} my={".5vh"}>
-        {continues ? "Continue" : "Submit"}
+      <Box mx={"30vw"} my={".2vh"}>
+        <Typography variant="h5">{continues ? "Continue" : "Submit"}</Typography>
       </Box>
     </Button>
   );

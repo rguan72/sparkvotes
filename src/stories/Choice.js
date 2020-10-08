@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Card from "@material-ui/core/Card"
+import Typography from "@material-ui/core/Typography"
 
 /**
  * Primary UI component for user interaction
@@ -13,7 +14,6 @@ export const Choice = ({ style, label, index, select, onClick}) => {
             height: "20vh",
             marginRight: (index % 2 === 0) ? "1vw" : 0,
             marginBottom: "vw",
-            padding: "2vw",
             fontSize: 20,
             boxShadow: "#ADD8E6",
             backgroundColor: select ? "#ADD8E6" : "#D3D3D3",
@@ -24,7 +24,7 @@ export const Choice = ({ style, label, index, select, onClick}) => {
           }}
           onClick={onClick}
         >
-          {label}
+          <Typography variant="h5" style={{ margin: "3vw" }}>{label}</Typography>
         </Card>
     );
 };
