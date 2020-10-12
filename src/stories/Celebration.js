@@ -3,7 +3,7 @@ import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import Confetti from "react-confetti";
 import { useWindowSize } from "@react-hook/window-size";
-import { FacebookShareButton, FacebookIcon, TwitterShareButton, TwitterIcon, RedditShareButton, RedditIcon, LinkedinShareButton, LinkedinIcon, PinterestShareButton, PinterestIcon, } from "react-share"
+import { FacebookShareButton, FacebookIcon, TwitterShareButton, TwitterIcon, RedditShareButton, RedditIcon, LinkedinShareButton, LinkedinIcon, } from "react-share"
 import "../App.css"
 
 export const CelebrationPage = () => {
