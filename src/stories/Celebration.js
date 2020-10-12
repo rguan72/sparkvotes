@@ -16,7 +16,6 @@ export const CelebrationPage = () => {
                 <FacebookShareButton url={url} style={{ marginRight: "1vw" }}> <FacebookIcon round /> </FacebookShareButton>
                 <TwitterShareButton url={url} style={{ marginRight: "1vw" }}> <TwitterIcon round /> </TwitterShareButton>
                 <RedditShareButton url={url} style={{ marginRight: "1vw" }}> <RedditIcon round /> </RedditShareButton>
-                <PinterestShareButton url={url} style={{ marginRight: "1vw" }}> <PinterestIcon round /> </PinterestShareButton>
                 <LinkedinShareButton url={url} style={{ marginRight: "1vw" }}> <LinkedinIcon round /> </LinkedinShareButton>
             </Box>
             <Confetti width={width} height={height}/>
